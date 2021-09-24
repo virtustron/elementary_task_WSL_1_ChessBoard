@@ -1,22 +1,16 @@
-CXX       := g++
-CXX_FLAGS := -std=c++17 -ggdb
-
-BIN     := bin
-SRC     := src
-INCLUDE := 
-
-LIBRARIES   :=
-EXECUTABLE  := chessboard
+src = ./src/
+bin = ./bin/
 
 
-all: $(BIN)/$(EXECUTABLE)
+all: #main
+	g++ -o $(bin)main $(src)main.cpp
 
-run: clean all
-	clear 
-	./$(BIN)/$(EXECUTABLE)
+main: $(bin)main.o $(bin)ChessBoardConsoleUI.o
+	g++ -o $(bin)main $(bin)main.o $(bin)ChessBoardConsoleUI.o
 
-$(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
-	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) $^ -o $@ $(LIBRARIES)
+$(bin)main.o:
+	g++ -c $(src)main.cpp
 
-clean:
-	-rm $(BIN)/*
+$(bin)ChessBoardConsoleUI.o: 
+	g++ -c $(src)ChessBoardConsoleUI.cpp
+

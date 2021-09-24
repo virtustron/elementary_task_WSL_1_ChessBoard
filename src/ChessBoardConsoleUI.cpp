@@ -42,7 +42,7 @@ void ChessBoardConsoleUI::StartReadingChessboardParameters()
 {
 	cout << "Enter chessboard height:\n";
 	cin >> m_chessboard_height;
-
+	/* 
 	if (!cin)				// or if(cin.fail())
 	{
 		// user didn't input a number
@@ -53,11 +53,13 @@ void ChessBoardConsoleUI::StartReadingChessboardParameters()
 		std::cout << "Please enter a numeric value\n"; 
 		m_chessboard_height = 1;
 	}
+	*/
 
 
 	cout << "Enter chessboard width:\n";
 	cin >> m_chessboard_width;
 
+	/*
 	if (!cin)				// or if(cin.fail())
 	{
 		// user didn't input a number
@@ -68,6 +70,7 @@ void ChessBoardConsoleUI::StartReadingChessboardParameters()
 		std::cout << "Please enter a numeric value\n";
 		m_chessboard_width = 1;
 	}
+	*/
 }
 
 void ChessBoardConsoleUI::WriteChessBoard(char* chess_board_string[], const int chess_board_height, const int chess_board_width)
