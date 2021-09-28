@@ -3,10 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}/src/exception"
+                "${default}"
             ],
-            "defines": [],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu17",
             "cppStandard": "gnu++14",
